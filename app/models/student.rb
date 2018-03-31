@@ -20,7 +20,6 @@ class Student < ActiveRecord::Base
     else
       Student.all.select {|student| student.name.include?(name)}
     end
-
   end
 
 end
