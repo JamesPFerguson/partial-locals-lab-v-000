@@ -18,7 +18,7 @@ class Student < ActiveRecord::Base
     if name == ""
       Student.all
     else
-      Student.all.select{|student| student.name.downcase.include?(name)}.map{|student| student.name}
+      Student.all.select{|student| student.name.downcase.include?(name)}
     end
   end
 
