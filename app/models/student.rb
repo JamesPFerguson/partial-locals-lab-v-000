@@ -18,8 +18,7 @@ class Student < ActiveRecord::Base
     if name == ""
       Student.all
     else
-      students = Student.all
-      g_students = students.select{|student| student.name == name}.map{|student| student.name}
+      Student.all.select{|student| student.name == name}.map{|student| student.name}
     end
   end
 
