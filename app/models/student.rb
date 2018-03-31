@@ -18,7 +18,8 @@ class Student < ActiveRecord::Base
     if name == ""
       Student.all
     else
-      Student.all.select {|student| student.name.include?(name)}
+      @value = Student.all.select {|student| student.name.include?(name)}
+      binding.pry
     end
   end
 
