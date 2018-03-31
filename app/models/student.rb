@@ -19,8 +19,7 @@ class Student < ActiveRecord::Base
       Student.all
     else
       students = Student.all
-      g_students = students.select{|student| student.name == name}
-      binding.pry
+      g_students = students.select{|student| student.name == name}.map{|student| student.name}
     end
   end
 
