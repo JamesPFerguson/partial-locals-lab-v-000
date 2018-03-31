@@ -19,6 +19,7 @@ class Student < ActiveRecord::Base
       Student.all
     else
       Student.all.select{|student| student.name.include?(name)}.map{|student| student.name}
+      binding.pry
     end
   end
 
