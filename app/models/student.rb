@@ -18,7 +18,6 @@ class Student < ActiveRecord::Base
     if name == ""
       Student.all
     else
-      binding.pry
       students = Student.all
       g_students = students.select{|student| student.name == name}
     end
